@@ -1,0 +1,35 @@
+/*
+    SELECT title, rating FROM reviews
+    INNER JOIN series
+    ON series.id = reviews.series_id;
+*/
+
+/* 
+    SELECT title, avg(rating) as avg_rating FROM reviews
+    INNER JOIN series
+    ON series.id = reviews.series_id
+    GROUP BY series_id
+    ORDER BY avg_rating; 
+*/
+
+/*
+	SELECT first_name, last_name, rating FROM reviewers
+    INNER JOIN reviews
+    ON reviewers.id = reviews.reviewer_id ;
+*/
+
+/*
+	SELECT title as unreview_series FROM series
+	LEFT JOIN reviews
+    ON series.id = reviews.series_id
+    WHERE rating is null;
+*/
+
+
+/*
+	SELECT genre, avg(rating) as avg_rating FROM series
+	INNER JOIN reviews
+    ON series.id = reviews.series_id
+    GROUP BY genre
+    ORDER BY avg_rating;
+*/
