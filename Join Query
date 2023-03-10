@@ -1,3 +1,5 @@
+-- Many to Many Relationship Query
+
 SELECT title, rating FROM reviews
 INNER JOIN series
     ON series.id = reviews.series_id;
