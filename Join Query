@@ -43,3 +43,11 @@ LEFT JOIN reviews
 	ON reviewers.id = reviews.reviewer_id 
     	GROUP BY reviewer_id
     	ORDER BY avg DESC;
+	
+	
+SELECT title, rating, CONCAT(first_name, ' ', last_name) as reviewer
+FROM series
+INNER JOIN reviews
+	ON series.id = reviews.series_id
+INNER JOIN reviewers
+	ON reviewers.id = reviews.reviewer_id;
